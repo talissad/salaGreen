@@ -1,13 +1,13 @@
 from Talissa.Aula01.teste_balde.balde import Balde
 
-a = Balde()
-
-print('#'*40,'\nVerificando se o balde inicia vazio!\n')
-assert a._Balde__balde == 0, 'Erro! O Balde() não iniciou vazio'\
-                           'ou a variável privada não é __balde!'
-assert a._Balde__balde_atual == 0, 'Erro! O Balde() não iniciou vazio'\
-                           'ou a variável privada não é __balde_atual!'
-print('Balde iniciou vazio: OK\n')
+# a = Balde()
+#
+# print('#'*40,'\nVerificando se o balde inicia vazio!\n')
+# assert a._Balde__balde == 0, 'Erro! O Balde() não iniciou vazio'\
+#                            'ou a variável privada não é __balde!'
+# assert a._Balde__balde_atual == 0, 'Erro! O Balde() não iniciou vazio'\
+#                            'ou a variável privada não é __balde_atual!'
+# print('Balde iniciou vazio: OK\n')
 
 a = Balde()
 print('#'*40,'\nAdicionando volume (10 a 50) no Balde!\n')

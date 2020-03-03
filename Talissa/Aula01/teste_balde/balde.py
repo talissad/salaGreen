@@ -38,9 +38,13 @@ class Balde:
         return self.__balde_atual
 
     def set_volume_balde(self, volume_balde):
-        if 0 <= volume_balde <= 50:
-            self.__balde_atual = volume_balde
-            self.enchendo_balde(volume_balde)
+        if type(volume_balde) is int:
+            print('entrou')
+            if 10 <= int(volume_balde) and 50 >= volume_balde:
+                print('entrou')
+                self.__balde = volume_balde
+            else:
+                self.enchendo_balde(volume_balde)
         else:
             return print('O volume está fora dos padrões')
 
