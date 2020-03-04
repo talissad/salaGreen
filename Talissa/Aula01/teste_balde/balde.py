@@ -1,6 +1,3 @@
-# Adivinhe a quantidade de agua.
-#
-# Crie um objeto que inicie com o volume do balde vazio.
 # O volume do balde deve ser o atributo privado __balde para o volume total do balde
 # O volume do balde deve ser o atributo privado __balde_atual para o volume atual do balde
 # Crie o metodo get_volume_balde() que mostre o volume do balde.
@@ -35,29 +32,35 @@ class Balde:
         self.__balde_atual = 0
 
     def get_volume_balde(self):
-        return self.__balde_atual
+        return self.__balde
 
     def set_volume_balde(self, volume_balde):
-        if type(volume_balde) is int:
-            print('entrou')
+        if type(volume_balde) is int and volume_balde > 0:
             if 10 <= int(volume_balde) and 50 >= volume_balde:
-                print('entrou')
-                self.__balde = volume_balde
+                self.__balde_atual = volume_balde
+                self.__balde += self.__balde_atual
             else:
                 self.enchendo_balde(volume_balde)
+        elif type(volume_balde) is str or volume_balde < 0:
+            return False
         else:
-            return print('O volume está fora dos padrões')
+            return False
 
     def enchendo_balde(self, volume_agua):
-        try:
-            if 0 == volume_agua:
-                return print('Vazio')
-            elif volume_agua == 50:
-                return True
+        if type(volume_agua) is int:
+            if volume_agua < 0:
+                return 'ValorError'
             elif volume_agua > 50:
                 return False
-        except ValueError:
-            print('Somente números positivos!')
+            elif 0 == volume_agua:
+                return print('Vazio!')
+            elif volume_agua == 50:
+                return True
+            else:
+                return 'ValorError'
+        else:
+            return False, print('ValorError')
+
 
     def sorteio(self):
         self.__balde = randint(10, 50)
