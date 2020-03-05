@@ -11,12 +11,10 @@ class Circulo:
         self.__cor = cor
 
     def set_raio(self, raio):
-        pass
-        #self.__raio = raio
+        self.__raio = raio
 
     def set_material(self, material):
-        pass
-        #self.__material = material
+        self.__material = material
 
     def get_cor(self):
         return self.__cor
@@ -28,23 +26,21 @@ class Circulo:
         return self.__material
 
     def calcular_area(self):
-        pass
-        #return math.pi * self.__raio ** 2
+        return math.pi * self.__raio ** 2
+
 
 class Quadrado:
     def __init__(self, tamanho_lado):
         self.__tamanho_lado = tamanho_lado
 
     def set_valor(self, n1):
-        pass
-        #self.__tamanho_lado = n1
+        self.__tamanho_lado = n1
 
     def get_valor(self):
         return self.__tamanho_lado
 
     def calcular_area(self):
-        pass
-        #return self.__tamanho_lado * self.__tamanho_lado
+        return self.__tamanho_lado * self.__tamanho_lado
 
 
 class Retangulo:
@@ -53,12 +49,10 @@ class Retangulo:
         self.__largura = largura
 
     def set_comprimento(self, n1):
-        pass
-        #self.__comprimento = n1
+        self.__comprimento = n1
 
     def set_largura(self, n2):
-        pass
-        #self.__largura = n2
+        self.__largura = n2
 
     def get_comprimento(self):
         return self.__comprimento
@@ -67,5 +61,4 @@ class Retangulo:
         return self.__largura
 
     def calcular_area(self):
-        pass
-        #return self.__comprimento * self.__largura
+        return self.__comprimento * self.__largura
