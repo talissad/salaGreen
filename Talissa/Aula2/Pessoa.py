@@ -26,6 +26,7 @@ class Endereco:
     def set_estado(self, novo_valor):
         self.__estado = novo_valor
 
+
 class Pessoa:
     def __init__(self, nome, sobrenome, idade):
         self.__nome = nome
