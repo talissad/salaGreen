@@ -26,6 +26,7 @@ class Circulo:
         return self.__material
 
     def calcular_area(self):
+        print(math.pi)
         return math.pi * self.__raio ** 2
 
 
@@ -62,3 +63,4 @@ class Retangulo:
 
     def calcular_area(self):
         return self.__comprimento * self.__largura
+
