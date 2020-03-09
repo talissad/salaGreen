@@ -1,8 +1,12 @@
+from Talissa.Aula04.Endereco import Endereco
+
+
 class Pessoa:
     def __init__(self, nome: str, sobrenome: str, idade: int):
-        self.__nome = ''
-        self.__sobrenome = ''
-        self.__idade = 0
+        self.__nome = nome
+        self.__sobrenome = sobrenome
+        self.__idade = idade
+        # self.endereco = Endereco()
 
         if type(nome) == str:
             self.__nome = nome
@@ -38,10 +42,10 @@ class Pessoa:
             self.__idade = novo_valor
 
 
-p = Pessoa('', '', 0)
-
-p.set_nome('Talissa')
-p.set_idade(1)
-print(p.get_nome())
-
-assert p.get_nome() == 'Talissa'
+# p = Pessoa('', '', 0)
+#
+# p.set_nome('Talissa')
+# p.set_idade(1)
+# print(p.get_nome())
+#
+# assert p.get_nome() == 'Talissa'
